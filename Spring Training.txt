@@ -1,0 +1,1509 @@
+14	
+sandesh chogale	
+sandesh.chogale@infrasofttech.com	
+
+https://cloudlabs.nuvepro.com/company/eduramp/home	
+microserviceslab14
+Microserviceslab321%
+
+https://myjpmc.signin.aws.amazon.com/console
+Student14
+Eduramp#2012
+Microserviceslab321%
+
+
+Latest version in my repo/spring1/
+	or D:/code1/spring1
+
+https://github.com/vilasvarghese/microservices
+https://github.com/vilasvarghese/microservices1
+https://github.com/vilasvarghese/spring1
+https://github.com/Nirman-Rathod/Spring
+https://github.com/in28minutes/SpringIn28Minutes
+https://github.com/koushikkothagal/spring-framework
+https://www.youtube.com/watch?v=TW51XsixMqA&list=PLC97BDEFDCDD169D7&index=8
+
+https://github.com/vilasvarghese
+https://github.com/vilasvarghese/spring1
+https://github.com/vilasvarghese/microservices1
+https://github.com/vilasvarghese/microservices1
+https://github.com/vilasvarghese/spring1/blob/master/spring1/pom.xml
+
+
+
+
+
+Setup for Spring
+
+Fix intellisense 
+	https://www.youtube.com/watch?v=Q83wCCxpqnI
+
+----------------------------------------------------------------------
+Exercise 1 
+----------
+Create a spring boot project in maven
+Remove all maven dependencies and build
+
+Download spring-core and spring-context dependencies from 
+https://mvnrepository.com/
+Refer
+	D:\code1\spring1\spring1\src\main\java\com\vilas\spring1\ to create
+		- a bean - Refer Student.java
+		- an xml like spring.xml or bean.xml - Refer first.xml
+		- A client to lookup the bean - 
+
+	Run as a normal java application
+----------------------------------------------------------------------
+
+
+
+Day 1, 2 & 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• What is Spring 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Spring Framework 
+
+https://github.com/vilasvarghese/microservices/blob/master/training/SpringNotes.txt
+	open-source framework 
+	build enterprise Java applications. 
+	simplify complex and cumbersome enterprise Java application development process 
+		create 
+			scalable, 
+			secure
+			robust 
+				enterprise [web] applications
+	lightweight framework 
+		what is a framework
+	technologies :
+		Aspect-oriented programming (AOP)
+		Dependency injection (DI)
+		Plain Old Java Object (POJO)
+
+	.
+	Spring framework 
+		collection of sub frameworks 
+			Spring Web Flow
+			Spring MVC
+			Spring ORM. 
+		supports 
+			Java
+			Kotlin and 
+			Groovy.
+
+		Base framework for:
+			Spring Boot
+			Spring Cloud
+			Spring GraphQL
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Features of Spring 
+		IoC (Inversion of Control) and Dependency Injection 
+		--------------------------
+			Core feature of Spring 
+			IoC uses the 
+				dependency injection 
+			or
+				dependency lookup patterns 
+
+			IOC container 
+				responsible for managing the lifecycle of a defined Java object
+				significantly increasing the configurability of a Spring-based application.
+
+				provide the object reference during runtime. 
+				The container consists of assembler code that is required for configuration management.
+
+			Spring provides org.springframework.beans and org.springframework.context packages that can be used to facilitate these functions.
+
+		aspect-oriented programing
+			AOP aims to provide more modularity to the cross-cutting concerns, which are functions that span across the application, such as:
+
+			Logging
+			Caching
+			Transaction management
+			Authentication
+			Etc.
+			
+			AOP complements object-oriented programming 
+				by providing a different way to structure the program
+					[OOP modularity is based on classes].
+
+			AOP
+				main unit of modularity - aspect (cross-cutting concern). 
+				Enables users to use AOP 
+					create custom aspects and
+					declarative enterprise services. 
+				The IoC container does not depend on AOP
+					developers are free code according to their choice
+
+			However, Aspect-Oriented Programming combined with the Spring IoC provides a robust middleware solution
+
+		Data access framework
+			Database communication is tricky. 
+			Spring simplifies the database communication 
+				provide direct support for popular data access frameworks in Java, such as 
+					JDBC, 
+					Hibernate, 
+					Java Persistence API (JPA), etc.
+
+			Also offers 
+				resource management
+				exception handling, and 
+				resource wrapping 
+					for all the supported data access frameworks.
+
+		Transaction management framework
+			Spring offers an abstraction mechanism 
+				enables users to:
+					Work with 
+						local, 
+						global, and 
+						nested transactions
+			Save points
+			Simplify transaction management across the application
+			The Spring Data Access Framework 
+				directly integrates with the Transaction Management Framework 
+					support for messaging and caching. 
+				Enables developers to create feature-rich transactional systems 
+					that span across the applications without depending on EJB or JTA.
+		
+		Spring MVC framework
+			request-based framework 
+			developers can create customized MVC implementations easily.
+			Core component of Spring MVC 
+				DispatcherServlet class 
+					handles user requests 
+					forwards them to the correct controller. 
+			Controller can process the request
+				create the model 
+				provide the information to the end-user via a specified view.
+
+		Spring web service
+			This Spring Web Service component 
+				create and manage web service endpoints in the application. 
+				layered approach 
+					can be managed using XML 
+					can map  web requests to a specific object.
+
+		Spring test frameworks
+			Testing is a core part of any development. Spring simplifies testing within the framework with components like:
+
+			Mock objects
+			TestContext framework
+			Spring MVC Test
+
+	
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Spring architecture 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Reference: com.vilas.spring1.First
+	
+	o Spring IOC Container
+		https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html
+		
+		Spring IoC container is responsible for 
+			instantiating, 
+			wiring, 
+			configuring,
+			destorying and 
+			managing 
+				the entire life cycle of objects. 
+				
+		Spring IoC Containers
+			BeanFactory 
+			ApplicationContext 
+			
+		
+		IoC is also known as dependency injection (DI)" - From documentation. 
+		Process where 
+			objects define their dependencies
+				i.e. objects they work with
+					through constructor arguments
+					arguments to a factory method
+					or properties that are set on the object instance after it is constructed or returned from a factory method. 
+			The container then injects those dependencies when it creates the bean. 
+			This process is fundamentally the inverse
+				hence the name Inversion of Control (IoC)
+					the bean itself 
+						controlling the instantiation or 
+						location of its dependencies 
+					by using direct construction of classes or 
+						a mechanism such as the Service Locator pattern.
+
+		org.springframework.beans and 
+		org.springframework.context 
+			packages are the basis for Spring Framework's IoC container. 
+		BeanFactory interface 
+			provides advanced configuration mechanism 
+				capable of managing any type of object. 
+		ApplicationContext is a sub-interface of BeanFactory. 
+			Easier integration with Spring's AOP features
+				message resource handling (for use in internationalization), 
+				event publication
+				application-layer specific contexts such as the WebApplicationContext for use in web applications.
+
+		BeanFactory 
+			What is a Factory?
+				Client doesn't instaitate
+				Calls factory
+				Factory refers a configuration 
+				Instantiates and returns
+			SpringBeanFactory also does the same	
+			provides the configuration framework 
+			basic functionality, and the ApplicationContext adds more enterprise-specific functionality. The ApplicationContext is a complete superset of the BeanFactory, and is used exclusively in this chapter in descriptions of Spring's IoC container. For more information on using the BeanFactory instead of the ApplicationContext, refer to Section 5.15, “The BeanFactory”.
+
+		In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. Otherwise, a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Dependency injection 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Let's write a 
+		tightly coupled class
+		loosely coupled class
+		class re-written using DI
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Spring XML based Configuration 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Go to sprint initializr
+		start.spring.io
+		
+		Select maven project
+		Java
+		Latest version without snapshot or M1/M2
+		
+		Group: com.vilas
+		Artifact: learn-spring
+		Name : learn-spring
+		Description : ....
+		Package name : com.vilas.spring
+		
+		
+	or
+		Installation instruction
+			https://github.com/vilasvarghese/microservices/blob/master/training/InstallEclipse.txt
+		install java
+		install eclipse
+		install sts
+			download sts from spring.io/tools
+			double click or extract
+				double click on the sts application file
+				
+				
+		
+	o Application Context 
+		Can do SpringBeanFactory (Factory - instantiation) +
+			AOP
+			Event Notification ect.
+			
+		ApplicationContext is the sub-interface of BeanFactory. 
+		BeanFactory 
+			provides basic functionalities 
+			recommended to use for lightweight applications like mobile and applets. 
+		
+		ApplicationContext provides 
+			adds enterprise-specific functionalities as follows:
+				Bean factory methods for accessing application components. 
+					Inherited from ListableBeanFactory.
+				The ability to load file resources in a generic fashion. 
+					Inherited from the ResourceLoader interface.
+				The ability to publish events to registered listeners. 
+					Inherited from the ApplicationEventPublisher interface.
+				The ability to resolve messages, supporting internationalization. 
+					Inherited from the MessageSource interface.
+				Inheritance from a parent context. 
+					Definitions in a descendant context will always take priority. 
+					for e.g., 
+						single parent context for entire web application, 
+						while each servlet - its own child context 
+							independent of other servlet.
+				
+				
+		Different types of Application containers provided by Spring.
+		For e.g.
+			1. AnnotationConfigApplicationContext  
+			2. AnnotationConfigWebApplicationContext
+			3. XmlWebApplicationContext	
+			4. ClassPathXmlApplicationContext
+		For complete details - plz refer
+		https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html
+	
+			Also refer methods in above doc.
+			
+		
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html
+	Bean Scope
+
+
+		o Prototype and Singleton objects 
+			Default Application Context:
+				Load all beans at initialization.
+				Inject/give beans when asked.
+			
+			Scope
+				Prototype 
+					New bean created for every request
+						Even internal references also would create new instance
+				Singleton
+					Only one instance per Spring Container
+					Multiple Spring Container /JVM is possible.
+					So this singleton is diff. from Java Singleton
+				WebAware
+					Tie to request, session scope
+					request
+						Scopes a single bean definition to the lifecycle of a single HTTP request; that is each and every HTTP request will have its own instance of a bean created off the back of a single bean definition. Only valid in the context of a web-aware Spring ApplicationContext.
+
+					session
+						Scopes a single bean definition to the lifecycle of a HTTP Session. Only valid in the context of a web-aware Spring ApplicationContext.
+
+					global session
+						Scopes a single bean definition to the lifecycle of a global HTTP Session. Typically only valid when used in a portlet context. Only valid in the context of a web-aware Spring ApplicationContext.
+			
+				
+				
+			The singleton scope
+			-------------------
+Exercise 2 : reference to Exercise 1					
+	spring1/com.vilas.ch1.scope.singleton			
+				When a bean is a singleton
+					only one shared instance of the bean will be managed
+					all requests for beans with an id or ids matching that bean definition 
+						will result in that one specific bean instance being returned 
+						[by the Spring container].
+				
+				Spring singleton Vs Singleton pattern [Gang of Four (GoF) patterns book].
+				-------------------------------------------------------------------------
+				The GoF Singleton 
+					hard rule: only single class per ClassLoader. 
+				Spring singleton 
+					single instance per container. 
+					N.B: There can be multiple spring containers per JVM
+
+			Different ways to create a Singleton bean
+				<!-- default -->
+				<bean id="accountService" class="com.foo.DefaultAccountService"/>
+				<!-- the following is equivalent, though redundant (singleton scope is the default); using spring-beans-2.0.dtd -->
+				<bean id="accountService" class="com.foo.DefaultAccountService" scope="singleton"/>
+				<!-- the following is equivalent and preserved for backward compatibility in spring-beans.dtd -->
+				<bean id="accountService" class="com.foo.DefaultAccountService" singleton="true"/>
+
+
+			The prototype scope
+			-------------------
+Exercise 2 : reference to Exercise 1					
+	spring1/com.vilas.ch1.scope.prototype.
+				The non-singleton: prototype scope 
+				create a new bean instance for every request  
+				(that is, it is injected into another bean or it is requested via a programmatic getBean() method call on the container). 
+				use 
+					prototype scope for all stateful beans
+					singleton scope for stateless beans.
+
+				e.g. DAO would NOT typically be configured as a prototype
+					typical DAO should not hold any conversational state; 
+				To define a bean as a prototype in XML, you would write configuration like so:
+
+				<!-- using spring-beans-2.0.dtd -->
+				<bean id="accountService" class="com.foo.DefaultAccountService" scope="prototype"/>
+				<!-- the following is equivalent and preserved for backward compatibility in spring-beans.dtd -->
+				<bean id="accountService" class="com.foo.DefaultAccountService" singleton="false"/>
+				
+				Caution: prototype scope
+					in that the lifecycle of the bean changes slightly. 
+				
+				Spring does not manage the complete lifecycle of a prototype bean: 
+				Spring does -
+					the container instantiates, 
+					configures, 
+					decorates and 
+					otherwise assembles a prototype object, 
+					hands it to the client and then has no further knowledge of that prototype instance. 
+				
+				This means that while initialization lifecycle callback methods will be called on all objects regardless of scope, 
+					in prototypes, 
+					any configured destruction lifecycle callbacks will not be called. 
+				It is the responsibility of the client code to clean up prototype scoped objects and release any expensive 
+				resources that the prototype bean(s) are holding onto. 
+					(One possible way to get the Spring container to release resources used by prototype-scoped 
+						beans is through the use of a custom bean post-processor which would hold a reference to the beans that need to be cleaned up.)
+				
+				Refer : https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s07.html#beans-factory-extension-bpp
+				
+				
+		
+Singleton	
+	Only one instance is created for a single bean definition per Spring IoC container	
+	Same object is shared for each request made for that bean. 
+		i.e. The same object is returned each time it is injected.	
+	By default scope of a bean is singleton. 
+		So we don’t need to declare a been as singleton explicitly.	
+	Singleton scope should be used for stateless beans.	
+			
+Prototype			
+	A new instance is created for a single bean definition every time a request is made for that bean.
+	For each new request a new instance is created. i.e. A new object is created each time it is injected.
+	By default scope is not prototype so you have to declare the scope of a been as prototype explicitly.
+	Prototype scope is used for all beans that are stateful		
+
+Bean lifecycle
+	https://www.geeksforgeeks.org/bean-life-cycle-in-java-spring/?ref=lbp
+		Container started
+		Bean instantiated
+		Dependencies injected
+		Custom init
+		Custom utility method
+			ignore not used.
+		Custom detroy method
+	
+	Three ways to configure init/destroy
+		xml configuration
+		java code
+		annotation
+
+	A more detailed lifecycle
+		https://dzone.com/articles/spring-bean-lifecycle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Injection
+
+	Dependency Injection (DI) 
+		design pattern 
+		removes 
+			dependency 
+			tight coupling
+		Eases
+			programing
+			injecting features
+			replacing features
+			testing
+			
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+Exercise 3 : reference to Exercise 1	
+	o Setter injection 
+		com.vilas.ch2.injection.setter.Test
+		com.vilas.ch2.injection.setter.Employee
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Constructor injection 
+		com.vilas.ch2.injection.constructor.Test
+		com.vilas.ch2.injection.constructor.Employee		
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Spring Annotation based Configuration 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Starting with Spring 2.5, the framework introduced annotations-driven Dependency Injection.
+	
+	
+	@Configuration
+		Create 
+			- Bean com.vilas.ch3.annotation.aconfig.Employee
+			- A client using it - Client.java
+			- A Config - similar to applicationContext.xml or spring.xml - Config.java
+				annotate it as @Configuration
+					method as @Bean
+		
+		@Configuration annotation 
+			Use on top of any class 
+			declare that this class provides one or more @Bean methods 
+			processed by the Spring container 
+			generate bean definitions 
+			service requests for those beans at runtime.		
+		
+
+		
+	o @Autowired 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		D:\PraiseTheLord\HSBGInfotech\Spring\SpringBootNotes.txt
+	@Autowired
+		Done with reference to @Configuration
+		- Add department
+		- Add department in Employee (Many to one relation)
+		- Add getDepartment in Config 
+			Add @Bean annotation
+	
+		@Autowired
+			allows Spring to resolve and inject collaborating beans into our bean.
+			
+			 Spring framework 
+				enables AUTOMATIC dependency injection. 
+					declare all the bean dependencies in a Spring configuration file
+					Spring container can autowire relationships between collaborating beans. 
+			
+			Many ways to autowire
+				@Autowired + xml configuration
+				autowired=true in xml
+				@ComponentScan
+				@SpringBootApplication
+					equvalent to
+					@Configuration
+					@EnableAutoConfiguration
+					@ComponentScan.
+
+			https://www.baeldung.com/spring-autowire
+			@Autowired can be used on 
+				1. instance variables -
+					@Autowired
+					private String empId;
+					
+				2. Setter methods
+					@Autowired
+					public void setEmployeeId(String...)
+				
+				3. Constructors
+					    @Autowired
+						public Employee(Department d){
+						}
+						department would be injected 
+						
+					
+
+	o Component scan 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Done with reference @Autowired
+		- Remove all code in Config and add @ComponentScan
+		- Add @Component for Employee
+		- Add @Component for Department
+		
+		@ComponentScan and @Configuration 
+			annotation to specify the packages that we want to be scanned. 
+			@ComponentScan 
+				without arguments tells Spring to scan the current package and all of its sub-packages.
+				with package will include the package and all it's sub packages
+			
+			@Configuration
+				is also @Component
+				so it is a bean
+				implicit @EnableAutoConfiguration annotation added
+		
+			How @ComponentScan works
+				springComponentScanApp is created 
+					it's a configuration passed as an argument to the AnnotationConfigApplicationContext
+				Employee is a bean configured inside the configuration
+				Employee and Department are in the specified package
+				All of the above-listed customizations are applicable in Spring Boot too. 
+				If you use @ComponentScan + @SpringBootApplication = same result:
+		
+			@ComponentScan with Exclusions
+				use a filter, specifying the pattern for the classes to exclude:
+					@ComponentScan(excludeFilters = 
+					  @ComponentScan.Filter(type=FilterType.REGEX,
+						pattern="com\\.vilas\\..*"))
+		
+			Best practices
+			--------------
+				Try to put @Configuration class in the 
+					most specific package without package
+					or 
+						packages that you specify can be most specific.
+
+					So avoid Spring scans all the classes in all jars in a classpath
+						
+		
+	o @Component 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Already covered.
+		
+		"component" are considered as candidates for auto-detection 
+			when using annotation-based configuration and classpath scanning.
+		Other class-level annotations may be considered 
+			typically a special kind of component: e.g. 
+				e.g. 
+				@Repository annotation 
+				@Aspect annotation.
+				ect.
+		
+		Without explicit code, Spring will:
+			- Scan our application for classes annotated with @Component
+			- Instantiate them and inject any specified dependencies into them
+			- Inject them wherever needed
+		
+		Specific  component annotations
+			@Controller
+			@Service 
+			@Repository. 
+		They all provide the same function as @Component.
+			Theoretically similar to @Component 
+				exclusively for our bean auto-detection needs. 
+				On the flip side, we could also compose our own specialized annotations that use @Component.
+			There are cases Spring look specifically for Spring's specialized annotations to provide additional automation benefits. 
+			So, we should probably just stick with using the established specializations most of the time.
+		
+
+		@Component vs @Bean
+		-------------------
+		@Component and @Bean 
+			annotation Spring uses to gather beans at runtime
+		
+		@Bean 
+			not used at the class level. 
+			Spring can store the method's result as a Spring bean.
+
+			There are some important implications we should note because of the differences between @Component and @Bean.
+
+			@Component is a class-level annotation, but @Bean is at the method level, 
+				so @Component is only an option when a class's source code is editable. 
+				@Bean can always be used, but it's more verbose.
+			Using @Bean decouples the instantiation of the bean from its class definition. 
+				This is why we can use it to make even third-party classes into Spring beans. 
+				It also means we can introduce logic to decide which of several possible instance options for a bean to use.
+		
+		
+	o @Repository 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		annotates classes at the persistence layer
+		will act as a database repository.
+		catch persistence-specific exceptions 
+			re-throw them as one of Spring’s unified unchecked exceptions.
+		Spring provides PersistenceExceptionTranslationPostProcessor
+			required to add in our application context 
+			(already included in Spring Boot)
+	
+		<bean class= "org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+		Above post processor is added to all @Repository
+		
+		
+	o @Service 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		annotates classes at the service layer.
+		indicate that they're holding the business logic. 
+		no special use for this annotation.
+		
+	o @Qualifier
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		https://www.baeldung.com/spring-qualifier-annotation
+		By default, Spring resolves autowired entries by type.
+		If more than one bean of the same type is available in the container, 
+			the framework will throw NoUniqueBeanDefinitionException
+			
+		 @Qualifier annotation, we can eliminate the issue of which bean needs to be injected.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+
+• Spring REST and Spring Boot 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Dispatcher Servlet 
+		https://docs.spring.io/spring-framework/docs/3.0.0.M4/spring-framework-reference/html/ch15s02.html
+		
+		MVC
+		MVC2
+		
+		In Spring MVC
+			all incoming requests go through a single servlet. 
+				DispatcherServlet 
+			Front controller. 
+				design pattern in web development. 
+				a single servlet 
+					receives all requests 
+					transfers them to all other components of the application.
+					
+			DispatcherServlet 
+				send request to the specific Spring MVC controller.
+
+				Usually we have a lot of controllers 
+				DispatcherServlet refers to one of the following mappers in order to determine the target controller:
+					BeanNameUrlHandlerMapping;
+					ControllerBeanNameHandlerMapping;
+					ControllerClassNameHandlerMapping;
+					DefaultAnnotationHandlerMapping;
+					SimpleUrlHandlerMapping.
+				If no configuration is performed, the DispatcherServlet uses 
+					BeanNameUrlHandlerMapping and DefaultAnnotationHandlerMapping by default.
+
+				When the target controller is identified, the DispatcherServlet sends request to it. 
+				The controller performs some work according to the request (or delegate it to the other objects), and returns back to the DispatcherServlet with the Model and the name of the View.
+
+				The name of the View is only a logical name. This logical name is then used to search for the actual View (to avoid coupling with the controller and specific View). Then DispatcherServlet refers to the ViewResolver and maps the logical name of the View to the specific implementation of the View.
+
+				Some possible Implementations of the ViewResolver are:
+
+					BeanNameViewResolver;
+					ContentNegotiatingViewResolver;
+					FreeMarkerViewResolver;
+					InternalResourceViewResolver;
+					JasperReportsViewResolver;
+					ResourceBundleViewResolver;
+					TilesViewResolver;
+					UrlBasedViewResolver;
+					VelocityLayoutViewResolver;
+					VelocityViewResolver;
+					XmlViewResolver;
+					XsltViewResolver.
+
+				When the DispatcherServlet determines the view that will display the results it will be rendered as the response.
+
+				Finally, the DispatcherServlet returns the Response object back to the client.
+						
+		
+
+The job of the DispatcherServlet is to take an incoming URI and find the right combination of handlers (generally methods on Controller classes) and views (generally JSPs) that combine to form the page or resource that's supposed to be found at that location.
+
+I might have
+
+a file /WEB-INF/jsp/pages/Home.jsp
+and a method on a class
+
+@RequestMapping(value="/pages/Home.html")
+private ModelMap buildHome() {
+    return somestuff;
+}
+
+
+
+The Dispatcher servlet is the bit that "knows" to call that method when a browser requests the page, and to combine its results with the matching JSP file to make an html document.
+
+How it accomplishes this varies widely with configuration and Spring version.
+
+There's also no reason the end result has to be web pages. It can do the same thing to locate RMI end points, handle SOAP requests, anything that can come into a servlet.
+
+https://stackoverflow.com/questions/2769467/what-is-dispatcher-servlet-in-spring
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o @SpringBootApplication 
+		D:\PraiseTheLord\HSBGInfotech\Spring\SpringBoot.txt
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Spring Boot Auto-configuration 
+		https://docs.spring.io/spring-boot/docs/1.3.8.RELEASE/reference/html/using-boot-auto-configuration.html
+		attempts to automatically configure your Spring application 
+		based on the jar dependencies that you have added. 
+		For example, 
+			If HSQLDB (H2 db) is on your classpath (pom.xml)
+				and not manually configured any database connection beans
+				spring will auto-configure an in-memory database.
+
+		@EnableAutoConfiguration or @SpringBootApplication
+			Configure for auto-configuration 
+				Add to any @Configuration classes.
+
+		Gradually replacing auto-configuration
+		--------------------------------------
+			Auto-configuration is noninvasive
+				define your own configuration to replace specific parts of the auto-configuration. 
+				For example, 
+					add your own DataSource bean (pom.xml)
+						default embedded database support will back away.
+
+			To find out what auto-configuration is currently being applied, and why
+				start your application with the --debug switch. 
+				This will log an auto-configuration report to the console.
+
+		Disabling specific auto-configuration
+		-------------------------------------
+			To disable specific auto-configure classes 
+				use exclude attribute of @EnableAutoConfiguration .
+
+			import org.springframework.boot.autoconfigure.*;
+			import org.springframework.boot.autoconfigure.jdbc.*;
+			import org.springframework.context.annotation.*;
+
+			@Configuration
+			@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+			public class MyConfiguration {
+			}
+			If the class is not on the classpath that you want
+				use the excludeName attribute 
+				specify the fully qualified name instead
+			
+			Also control the list of auto-configuration classes to exclude via the spring.autoconfigure.exclude property.
+
+				
+	
+		More details https://www.javatpoint.com/spring-boot-auto-configuration
+
+		There are many other auto configurations
+			e.g. 
+			1. tomcat autoconfigured
+				tomcat runs on 8080		
+			
+			2. add the spring-boot-starter-web dependency
+				auto-configures 
+					dispatcherServlet
+					default error page
+					and web jars.
+			3. add the spring-boot-starter-data-jpa dependency
+				auto-configures a 
+					datasource 
+					and an Entity Manager.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Application runner 
+		interface 
+		used to execute the code after the Spring Boot application started. 
+		D:/code1/commandline/src/main/java/com/vilas/commandline
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o @RestController 
+		-------------
+	------------------------------------------------------------------------------------------------------------------------------
+		Write a Rest Endpoint
+		---------------------
+
+		To write a simple Hello World Rest Endpoint in the Spring Boot Application main class file itself, 
+		follow the steps shown below −
+
+		1) Add the @RestController annotation at the top of the class.
+		2) Write a Request URI method with @RequestMapping annotation.
+		3) Request URI method should return the Hello World string.
+
+
+		package com.vilas.demo;
+
+		import org.springframework.boot.SpringApplication;
+		import org.springframework.boot.autoconfigure.SpringBootApplication;
+		import org.springframework.web.bind.annotation.RequestMapping;
+		import org.springframework.web.bind.annotation.RestController;
+
+		@SpringBootApplication
+		@RestController
+		public class DemoApplication {
+		   public static void main(String[] args) {
+			  SpringApplication.run(DemoApplication.class, args);
+		   }
+		   @RequestMapping(value = "/")
+		   public String hello() {
+			  return "Hello World";
+		   }
+		}
+
+		Building it using maven and gradle
+		-----------------------------------
+		Create an Executable JAR
+
+		Maven
+		-----
+		Use the Maven command mvn clean install 
+
+		>>mvn clean install
+		------------------------------------------------------------------------------------------------------------------------------
+		
+		
+		
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o @RequestMapping
+		map HTTP request to handler method
+			part of MVC and REST controllers
+		Refer image in https://springframework.guru/spring-requestmapping-annotation/
+		
+		RequestDispatcher (Front Controller Below) servlet 
+			responsible for routing incoming HTTP requests to handler methods of controllers.
+		Use @RequestMapping to configure.
+		can be applied 
+			class-level and/or 
+			method-level.
+		Goes along with RestController annotation.
+		class-level RequestMapping annotation 
+			maps a specific request path or pattern onto a controller. 
+			apply additional method-level annotations 
+				to make mappings more specific to handler methods.
+		
+		
+		
+		@RequestMapping with Multiple URIs
+		----------------------------------
+			You can have multiple request mappings for a method. 
+			Use @RequestMapping annotation with a list of values.
+
+			@RestController
+			@RequestMapping("/home")
+			public class IndexController {
+			@RequestMapping(value={"", "/page", "page*","view/*,**/msg"})
+			  String indexMultipleMapping(){
+				return "Hello from index multiple mapping.";
+			  }
+			}
+			As you can see in this code, @RequestMapping supports wildcards and ant-style paths. For the preceding code, all these URLs will be handled by indexMultipleMapping().
+
+			localhost:8080/home
+			localhost:8080/home/
+			localhost:8080/home/page
+			localhost:8080/home/pageabc
+			localhost:8080/home/view/
+			localhost:8080/home/view/view
+
+		Refer https://springframework.guru/spring-requestmapping-annotation/ for
+			@RequestMapping with @RequestParam
+			@RequestMapping with HTTP Method
+			@RequestMapping with Producible and Consumable
+			@RequestMapping with Headers
+			@RequestMapping with Request Parameters
+			@RequestMapping with Dynamic URIs
+			@RequestMapping Default Handler Method
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Endpoints 
+		covered above
+		
+		
+		For Actuator endpoints refer
+			https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/reference/html/production-ready-endpoints.html
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Embedded Servers
+		Tomcat
+			default web server
+			cntl + click on your pom spring boot dependency
+			See the tomcat dependency
+			
+		Jetty
+			------------------------------------------------------------------------------------------------------------------------------
+			1. Create a spring boot "Web" project
+			2. Automatically Tomcat added
+			3. Exclude tomcat
+			
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+
+			Add Jetty server dependency
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jetty</artifactId>
+			</dependency>
+			------------------------------------------------------------------------------------------------------------------------------
+	o Adding Jetty Server 
+	
+		Compare Tomcat Vs Jetty Vs Undertow
+		https://examples.javacodegeeks.com/enterprise-java/spring/tomcat-vs-jetty-vs-undertow-comparison-of-spring-boot-embedded-servlet-containers/
+	
+				
+
+
+	Similarity of Tomcat vs. Jetty 
+		Tomcat and Jetty are both open source;
+		Tomcat and Jetty are both written in Java;
+		Tomcat and Jetty both implement the Servlet and JSP specification;
+		Tomcat and Jetty are both widely used in production environments; and
+		Tomcat and Jetty both enjoy widespread and passionate community support.
+
+	
+	
+	
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Adding Undertow Server 
+		Details in 
+		https://examples.javacodegeeks.com/enterprise-java/spring/tomcat-vs-jetty-vs-undertow-comparison-of-spring-boot-embedded-servlet-containers/
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Overriding application properties 
+		https://docs.spring.io/spring-boot/docs/1.0.0.RC5/reference/html/boot-features-external-config.html
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Building JAR & WAR 
+		update the pom.xml 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Handler for method parameters & return types 
+		Encapsulates information 
+			about a handler method consisting of 
+				a method and a bean. 
+		Provides convenient access to 
+			method parameters
+			method return value
+			method annotations, etc.
+		The class may be created with a 
+			bean instance or with a bean name (e.g. lazy-init bean, prototype bean). 
+			Use createWithResolvedBean() 
+				to obtain a HandlerMethod instance with a bean instance resolved through the associated BeanFactory.
+		Refer https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/method/HandlerMethod.html
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Command line runner 
+		java -jar <artifact.jar>
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Log4J & Slf4j 
+	
+	https://www.tutorialspoint.com/log4j/log4j_overview.htm
+	log4j 
+		open source logger framework
+		stores logs on storage medium in particular readable format.
+			reliable, 
+			fast 
+			flexible 	
+				logging framework (APIs) 
+		written in Java
+		distributed under the Apache Software License.
+		highly configurable 
+			through external configuration files at runtime. 
+		It views the logging process in terms of levels of priorities 
+		offers mechanisms to direct logging information to variety of destinations like 
+			database
+			file
+			console
+			UNIX Syslog
+		ported to the C, C++, C#, Perl, Python, Ruby, and Eiffel languages.
+		
+		log4j has three main components:
+			loggers: 
+				Responsible for capturing logging information.
+			appenders: 
+				Responsible for publishing logging information to various preferred destinations.
+			layouts: 
+				Responsible for formatting logging information in different styles.
+
+		log4j Features
+			thread-safe.
+			optimized for speed.
+			based on a named logger hierarchy.
+			supports multiple output appenders per logger.
+			supports internationalization.
+			not restricted to a predefined set of facilities.
+			Logging behavior can be set at runtime using a configuration file.
+			designed to handle Java Exceptions from the start.
+			uses multiple levels, namely 
+				ALL, 
+				TRACE, 
+				DEBUG, 
+				INFO, 
+				WARN, 
+				ERROR and 
+				FATAL.
+
+			format of the log output can be easily changed by extending the Layout class.
+			target of the log output as well as the writing strategy can be altered by implementations of the Appender interface.
+			It is fail-stop. 
+				However, although it certainly strives to ensure delivery, 
+				log4j does not guarantee that each log statement will be delivered to its destination.
+
+			Log4j in spring boot
+			--------------------
+				https://howtodoinjava.com/spring-boot2/logging/spring-boot2-log4j2-properties/
+				1. Exclude spring-boot-starter-logging and add
+					spring-boot-starter-log4j2
+				2. Add log4j2.properties or (log4j2.xml) in src/main/resources folder
+
+log4j2.Properties
+----------------------------------------------------------------------------------
+status = error
+name = PropertiesConfig
+ 
+filters = threshold
+ 
+filter.threshold.type = ThresholdFilter
+filter.threshold.level = debug
+ 
+appenders = console
+ 
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = %d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+ 
+rootLogger.level = debug
+rootLogger.appenderRefs = stdout
+rootLogger.appenderRef.stdout.ref = STDOUT
+----------------------------------------------------------------------------------
+if you are using log4j, then it could be little different.
+----------------------------------------------------------------------------------
+
+			Different levels supported
+				ALL, 
+				TRACE, 
+				DEBUG, 
+				INFO, 
+				WARN, 
+				ERROR and 
+				FATAL.
+
+			Appenders
+				
+		Disadv. of logging.
+		------------------
+			Logging does have its drawbacks also. It can slow down an application. If too verbose, it can cause scrolling blindness. To alleviate these concerns, log4j is designed to be reliable, fast and extensible.
+			Since logging is rarely the main focus of an application, the log4j API strives to be simple to understand and to use.
+			Logging in the microservices world.
+			
+			
+Another referece: https://www.baeldung.com/spring-boot-logging
+			
+		sl4j
+		----
+		https://www.tutorialspoint.com/slf4j/slf4j_vs_log4j.htm
+		
+			SLF4J (Simple Logging Facade for Java) 
+			not an implementation of logging framework
+			an abstraction for all those logging frameworks 
+				including log4J. 
+			So cannot compare both. 
+				difficult to prefer one between the two.
+			Logging abstraction is always preferable than logging framework. 
+			With SLF4J 
+				we can migrate to any logging framework.
+			
+			https://www.tutorialspoint.com/slf4j/slf4j_environment_setup.htm
+				With spring boot we will have use the exclusion as mentioned in log4j
+
+		
+		
+		1. Create a spring boot web application 
+			Run and watch the logs
+		2. Add logging.level.root=trace in the application.properties
+			Run and watch the logs
+			By default spring boot configures sl4j and hence it works.
+		3. We can either configure 
+			log4j/log4j2 or 
+			logback
+			
+		4. For logback 
+			Add a file with name logback.xml or logback-spring.xml
+------------------------------------------------------------------------------------------------------------
+Refer https://www.baeldung.com/spring-boot-logging for a detailed logback.xml or use the below
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="com.vilas" level="trace"/>
+</configuration>
+------------------------------------------------------------------------------------------------------------			
+			
+		5. For log4j 
+			Reference : my microservices1/log/sl4j repo.
+			Add exlusion for spring-boot-starter-logging and include spring-boot-starter-log4j2 
+			Add a file with name log4j.properties
+------------------------------------------------------------------------------------------------------------			
+	
+------------------------------------------------------------------------------------------------------------						
+			as in my microservices1/log/sl4j repo.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Spring Web Flux 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Reference
+		https://www.youtube.com/watch?v=9x7G4f3o90Q
+		https://github.com/Java-Techie-jt/springboot-webflux-demo
+		https://www.educative.io/blog/spring-webflux-tutorial
+		
+		Spring 5 
+			includes Spring WebFlux
+			provides reactive programming support for web applications. 
+			
+		https://howtodoinjava.com/spring-webflux/spring-webflux-tutorial/
+
+
+Day 4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Adding Data JPA dependency 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o H2 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		https://www.javatpoint.com/spring-boot-auto-configuration
+		
+	o MySQL
+		https://www.javadevjournal.com/spring-boot/spring-boot-mysql/
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Implementing Different layers in the application 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o DAO 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Service 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	o Controller 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Microservices Introduction 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Why and when to use 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Monolithic vs Microservice Architecture 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Benefits of Microservices 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Challenges in using Microservices Architecture 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Breaking down a Monolithic app to Microservice app 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Overview of microservices design patterns
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o 12-Factor Methodology
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		▪ Best practices of using 12-Factor Methodology
+			o Richardson’s maturity model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	o When not to implement microservices
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Microservices with Spring 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Spring Cloud & Spring Boot Projects
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Eureka Server
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Eureka Client
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Disabling the client features in Service Discovery
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Eureka Dashboard
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Locating the multiple instances of same Microservices
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 6 & 7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• application.properties
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o What is application.properties
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o How can we configure application.properties
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Different ways to read from application.properties
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Externalized Configuration in a Distributed System 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuration Server need
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Localized and Centralized configuration
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Loading the configuration server with native profile
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Local & Remote repositories to maintain the configuration
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuration client to utilized the configuration
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Encrypting & Decrypting the External Configuration 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Maintaining configurations in Private repositories 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Using @RefreshScope
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Loading the datasource configurations
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Configurations based on active profile like 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Development
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Production
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Default
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Communication between the Microservices 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Using Ribbon backed RestTemplate
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Using FeignClient
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Adding OpenFeign
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• @EnableFiegnClients
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• @FeignClient
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Client Resiliency and Circuit Breakers with Resilience4j 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Netflix Hystrix 
+			not in active development
+			currently in maintenance mode.
+			alternative is Resilience4j 
+				Circuit Breaker
+				Rate Limiter
+				Retry or Bulkhead.
+	
+		o Understanding the concept of fault tolerance 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuring the Resilience4j library 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Understanding the Ringbit buffer 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o States in Circuit breaker 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o OPEN 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o CLOSED 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• HALF_OPEN 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuring the Circuit Breaker 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o @CircuitBreaker 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Fallback methods 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuring the threshold rate 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Configuring the exceptions 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Configuring the Ring-Bit buffer 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Configuring the wait duration 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	• Spring Cloud API Gateway 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Single point of contact 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuring the Spring Cloud Gateway 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Routes 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Filters 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o ReverseProxy 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Distributed tracing with Sleuth and Zipkin 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Adding Sleuth and Zipkin libraries 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Adding logs to the application 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Understanding trace-id, span-id, parent-id 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Running the Zipkin 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Tracking the logs in Zipkin 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 10
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Securing Microservices with JWT 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Authentication & Authorization 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Protected Resource 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• JWT 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o What is JWT 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o JWT signature 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Generating JWT token
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configuring the client to use JWT token
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 11 & 12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• What is Serverless Architecture?
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• What is Event driven architecture?
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Function as a Service (FaaS)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Introduction to aws
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• serverless event driven service using aws lambda
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Setup a AWS Account
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Create IAM User
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Install AWS CLI
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Configure AWS CLI
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Upload a file into S3 bucket triggering lambda
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Overview of event driven architecture using 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	▪ SNS/SQS/Kafka ect.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 13 & 14
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Productionizing Cloud/Microservices Applications
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Typical cloud Microservices deployment overview
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Production challenges
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Scalability
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Quick time to market
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Performance
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Efficient dev. time
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Fault tolerance
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Loosely coupled architecture
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Reduce complexity
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Cloud-in-a-box application dev.
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Logging and Tracing using sleuth
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Load Balancing
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			▪ Client side
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			▪ Server side
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Visualization tools (Grafana)
+			https://www.skedler.com/blog/everything-you-need-to-know-about-grafana/
+			https://medium.com/nightingale/how-to-use-grafana-for-data-visualization-39d62276fcf9
+			
+			https://www.youtube.com/watch?v=gJZhdEJvZmc
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		o Monitoring (Fluentbit, Fluentd, Loki)
+			https://www.youtube.com/watch?v=bIAC0uQee0k
+			https://www.youtube.com/watch?v=CQiawXlgabQ
+		
+			Loki
+				horizontally-scalable
+				highly available
+				multi-tenant
+					log aggregation systems
+					inspired by Prometheus
+					
+			Simple and cost effective to operate
+				Most tools does inverted indexing
+				Hard to scale
+			Integrated with existing observability toolsC
+			Cloud Native and airplane mode
+			
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#create AWS instance, install docke, install MySQL
+Amazone AWS
+Create Instance
+Connect
+ssh -i "sandesh.pem" ec2-user@ec2-18-222-126-246.us-east-2.compute.amazonaws.com	
+cd download
+sudo su
+yum install docker -y
+systemctl start docker
+systemctl enable docker
+systemctl status docker
+systemctl stop docker
+
+docker run -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=admin -v /home/docker/mysql-data:/var/lib/mysql --name mysqlserver mysql
+docker ps
+docker exec -it 5 bach 
+mysql -u root -p
+pass- admin
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`wordpress` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+
+use wordpress;
+select * from customer;
+select * from company;
+
+docker container prune
+docker ps
+docker stop <ide>
+
+
+LOCAL IP: 3.110.66.209/32
+MY IP: 49.32.222.217/32
+18.222.126.246
+
